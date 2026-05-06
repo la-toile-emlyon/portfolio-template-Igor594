@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="logo" href="#">Logo</a>
+    <ul class="nav-links">
+      <li><a href="#" id="competences">MES COMPÉTENCES ↗</a></li>
+      <li><a href="#" id="projets">MES PROJETS ↗</a></li>
+      <li><a href="#" id="parcours">MON PARCOURS ↗</a></li>
+    </ul>
+    <a href="#"  class="btn-nav" id="contact">CONTACTEZ MOI ↗</a>
+  </nav>
+  <header id="hero">
+      <h1>
+        Je donne <em>vie</em> <br> à vos idées
+      </h1>
+      <p>
+        Je travail avec vous pour construire vos projet numériques
+      </p>
+  </header>
+  <main>
+    <section id="competences" class="competences">
+      <div class="competence-card">
+        <h3>
+          UI/UX design
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos enim at a id expedita provident odio? Quasi,
+          officiis non dolorem dignissimos ea, voluptatum exercitationem possimus soluta odit ullam voluptate! Earum!
+        </p>
+        <div class="tags">
+          <span class="tag">UI/UX design</span>
+          <span class="tag">Identité graphique</span>
+          <span class="tag">prototypage</span>
+          <span class="tag">design interactif</span>
+        </div>
+        <ul>
+          <li><a href="">UI/UX design</a></li>
+          <li><a href="">Identité graphique</a></li>
+          <li><a href="">prototypage</a></li>
+          <li><a href="">design interactif</a></li>
+        </ul>
+      </div>
+      <div class="carte">
+        <h3>
+          Intégrateur front end
+        </h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam harum laboriosam, expedita nobis, vitae
+          molestias mollitia qui dicta maxime nemo totam voluptatem amet quos debitis ea blanditiis in iure vel.
+        </p>
+        <ul>
+          <li><a href="">JavaScript</a></li>
+          <li><a href="">HTML/CSS</a></li>
+          <li><a href="">Python</a></li>
+          <li><a href="">Ruby</a></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="projets" class="projets">
+      <h2>Mes projets</h2>
+      <article class="projet-card">
+        <div class="projet-content">
+          <div class="projet-top">
+            <h3>
+              Projet 1
+            </h3>
+            <div class="tags">
+              <span class="tag">
+                Web design
+              </span>
+              <span class="tag">Development</span>
+            </div>
+          </div>
+          <div class="projet-bottom">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, animi fugiat? Perspiciatis, at sed
+              itaque vero doloremque atque facilis inventore distinctio blanditiis a nisi ratione porro voluptatem,
+              quasi impedit eos.</p>
+            <a href="#" class="btn-projet">Voir le projet ↗</a>
+          </div>
+        </div>
+        <div class="projet-image">
+          <img src="assets/project-img.jpeg" alt="">
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+
 </html>
