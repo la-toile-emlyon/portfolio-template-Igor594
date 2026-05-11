@@ -238,7 +238,7 @@ main {
 
 .projet-card {
   width: 100%;
-  height: 56dvh;
+  min-height: 56dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
@@ -267,7 +267,7 @@ main {
 
 .projet-image img {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--radius-image);
   display: block;

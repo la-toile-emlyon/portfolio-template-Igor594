@@ -77,7 +77,7 @@ section#competences.competences
 │   └── div.tags
 │       ├── span.tag    → "UI/UX design"
 │       ├── span.tag    → "Identité graphique"
-│       ├── span.tag    → "prototypage"
+│       ├── span.tag    → "c"
 │       └── span.tag    → "design interactif"
 │
 └── div.competence-card
