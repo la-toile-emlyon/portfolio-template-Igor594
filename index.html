@@ -1,92 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <!-- ===================== NAV ===================== -->
+    <!-- Contenu peuplé par script.js -->
+    <nav class="navbar">
+      <a href="#" class="logo"></a>
+      <ul class="nav-links"></ul>
+      <a class="btn-nav"></a>
+    </nav>
 
-<body>
-  <nav class="navbar">
-    <a class="logo" href="#">Logo</a>
-    <ul class="nav-links">
-      <li><a href="#" id="competences">MES COMPÉTENCES ↗</a></li>
-      <li><a href="#" id="projets">MES PROJETS ↗</a></li>
-      <li><a href="#" id="parcours">MON PARCOURS ↗</a></li>
-    </ul>
-    <a href="#"  class="btn-nav" id="contact">CONTACTEZ MOI ↗</a>
-  </nav>
-  <header id="hero">
-      <h1>
-        Je donne <em>vie</em> <br> à vos idées
-      </h1>
-      <p>
-        Je travail avec vous pour construire vos projet numériques
-      </p>
-  </header>
-  <main>
-    <section id="competences" class="competences">
-      <div class="competence-card">
-        <h3>
-          UI/UX design
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos enim at a id expedita provident odio? Quasi,
-          officiis non dolorem dignissimos ea, voluptatum exercitationem possimus soluta odit ullam voluptate! Earum!
-        </p>
-        <div class="tags">
-          <span class="tag">UI/UX design</span>
-          <span class="tag">Identité graphique</span>
-          <span class="tag">prototypage</span>
-          <span class="tag">design interactif</span>
-        </div>
-      </div>
-      <div class="competence-card">
-          <h3>Intégrateur front end</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab id et soluta repudiandae corporis nihil! Fugiat eos earum, facere hic nemo unde rerum enim repellendus eveniet iure pariatur voluptas. Laborum!</p>
-          <div class="tags">
-            <span class="tag">JavaScript</span>
-          <span class="tag">HTML/CSS</span>
-          <span class="tag">Python</span>
-          <span class="tag">Ruby</span>
-          </div>
-        </div>
-    </section>
+    <!-- ===================== HERO ===================== -->
+    <!-- Contenu peuplé par script.js -->
+    <header id="hero">
+      <h1></h1>
+      <p></p>
+    </header>
 
-    <section id="projets" class="projets">
-      <h2>Mes projets</h2>
-      <article class="projet-card">
-        <div class="projet-content">
-          <div class="projet-top">
-            <h3>
-              Projet 1
-            </h3>
-            <div class="tags">
-              <span class="tag">
-                Web design
-              </span>
-              <span class="tag">Development</span>
-            </div>
-          </div>
-          <div class="projet-bottom">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, animi fugiat? Perspiciatis, at sed
-              itaque vero doloremque atque facilis inventore distinctio blanditiis a nisi ratione porro voluptatem,
-              quasi impedit eos.</p>
-            <a href="#" class="btn-projet">Voir le projet ↗</a>
-          </div>
-        </div>
-        <div class="projet-image">
-          <img src="assets/project-img.jpeg" alt="">
-        </div>
-      </article>
-    </section>
-  </main>
-</body>
+    <main>
 
+      <!-- ===================== COMPÉTENCES ===================== -->
+      <!-- Cartes peuplées par script.js -->
+      <section id="competences" class="competences"></section>
+
+      <!-- ===================== PROJETS ===================== -->
+      <!-- Cartes peuplées par script.js -->
+      <section id="projets" class="projets">
+        <h2>Mes projets</h2>
+      </section>
+
+      <!-- ===================== PARCOURS ===================== -->
+      <!-- Items peuplés par script.js -->
+      <section id="parcours" class="parcours">
+        <h2>Mon parcours</h2>
+        <ul class="parcours-liste"></ul>
+      </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!-- Contenu peuplé par script.js (même données que nav) -->
+    <footer class="navbar">
+      <span class="logo"></span>
+      <ul class="nav-links"></ul>
+      <a class="btn-nav"></a>
+    </footer>
+
+    <!-- script.js charge data.json et peuple toute la page -->
+    <script src="script.js"></script>
+
+  </body>
 </html>
