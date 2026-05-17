@@ -134,15 +134,19 @@ fetch('data.json')
           <div class="tags"> ${genererTags()} </div>
         </div>
         <div class="projet-bottom">
-          <p>description</p>
+          <p>${projet.description}</p>
           <a href="lien" class="btn-projet">VOIR LE PROJET ↗</a>
         </div>
       </div>
       <div class="projet-image">
-        <img src="image" alt="titre">
+        <img src="${projet.image}" alt="${projet.titre}">
       </div>
     </article>`;
+    sectionProjets.insertAdjacentHTML('beforeend', carte)
     }
+    projets.forEach(projet => {
+      creerProjets(projet)
+    });
     // Toutes les cartes ont la même structure — le CSS s'occupe
     // d'inverser automatiquement les cartes paires (:nth-of-type(even))
     //
@@ -170,6 +174,17 @@ fetch('data.json')
     // --------------------------------------------------
 
     // TODO : forEach sur data.parcours
+    let parcours = data.parcour
+    function creerParcours(parcour) {
+      let parcour = `<li class="parcours-item">
+  <p class="parcours-titre">${parcour.annee} - ${parcour.titre}</p>
+  <p class="parcours-lieu">${parcour.lieu}</p>
+</li>`
+listeParcours.insertAdjacentHTML('beforeend', parcour)
+    }
+    parcours.forEach(parcour => {
+      creerParcours(parcour)
+    });
     // Pour chaque item, construire ce HTML et l'injecter :
     //
     // <li class="parcours-item">
