@@ -94,13 +94,21 @@ fetch('data.json')
 
     // TODO : forEach sur data.competences
     // Pour chaque compétence, construire ce HTML et l'injecter :
+  
+    let competences = data.competences
+    
 
-    sectionCompetences.forEach(competence => {
-      html += `<div class="competence-card">
-      <h3>${competence.titre}</h3>
-      <p>${competence.description}</p>
-      <div class="tags"> genererTags(...) </div>
-    </div>` 
+    function creerCarte(competence) {
+        let carte = `<div class="competence-card">
+        <h3>${competence.titre}</h3>
+        <p>${competence.description}</p>
+        <div class="tags">${genererTags(competence.tags)}</div>
+      </div>`;
+      sectionCompetences.insertAdjacentHTML('beforeend', carte);
+    };
+
+    competences.forEach(competence => {
+      creerCarte(competence);
     });
     //
     // <div class="competence-card">
@@ -117,6 +125,24 @@ fetch('data.json')
     // --------------------------------------------------
 
     // TODO : forEach sur data.projets
+    let projets = data.projets
+    function creerProjets(projet) {
+      let projet = `<article class="projet-card">
+      <div class="projet-content">
+        <div class="projet-top">
+          <h3>${projet.titre}</h3>
+          <div class="tags"> ${genererTags()} </div>
+        </div>
+        <div class="projet-bottom">
+          <p>description</p>
+          <a href="lien" class="btn-projet">VOIR LE PROJET ↗</a>
+        </div>
+      </div>
+      <div class="projet-image">
+        <img src="image" alt="titre">
+      </div>
+    </article>`;
+    }
     // Toutes les cartes ont la même structure — le CSS s'occupe
     // d'inverser automatiquement les cartes paires (:nth-of-type(even))
     //

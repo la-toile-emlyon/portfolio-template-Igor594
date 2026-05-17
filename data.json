@@ -5,6 +5,7 @@
     { "label": "MES COMPÉTENCES", "href": "#competences" },
     { "label": "MES PROJETS",     "href": "#projets"     },
     { "label": "MON PARCOURS",    "href": "#parcours"    }
+    
   ],
 
   "cta": {
@@ -21,6 +22,11 @@
 
   "competences": [
     {
+      "titre": "UI/UX design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
+      "tags": ["UI/UX design", "Identité graphique", "Prototypage", "Design interactif"]
+    },
+     {
       "titre": "UI/UX design",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
       "tags": ["UI/UX design", "Identité graphique", "Prototypage", "Design interactif"]
