@@ -86,7 +86,7 @@ fetch('data.json')
 
     heroTitre.innerHTML = `${data.hero.titre} <em>${data.hero.accent}</em><br>${data.hero.suite}`
     // TODO : heroSousTitre.textContent = ...
-    heroSousTitre.textContent = data.hero.sousTitre
+    heroSousTitre.textContent = `${data.hero.sousTitre}`
 
     // --------------------------------------------------
     //  COMPÉTENCES
@@ -94,19 +94,19 @@ fetch('data.json')
 
     // TODO : forEach sur data.competences
     // Pour chaque compétence, construire ce HTML et l'injecter :
-  
-    let competences = data.competences
+
     
 
+
     function creerCarte(competence) {
-        let carte = `<div class="competence-card">
+      let carte = `<div class="competence-card">
         <h3>${competence.titre}</h3>
         <p>${competence.description}</p>
         <div class="tags">${genererTags(competence.tags)}</div>
       </div>`;
-      sectionCompetences.insertAdjacentHTML('beforeend', carte);
+      sectionCompetences.insertAdjacentHTML('beforeend', competences);
     };
-
+let competences= data.competences
     competences.forEach(competence => {
       creerCarte(competence);
     });
@@ -125,9 +125,9 @@ fetch('data.json')
     // --------------------------------------------------
 
     // TODO : forEach sur data.projets
-    let projets = data.projets
+    let projets = '';
     function creerProjets(projet) {
-      let projet = `<article class="projet-card">
+       projet = `<article class="projet-card">
       <div class="projet-content">
         <div class="projet-top">
           <h3>${projet.titre}</h3>
@@ -142,7 +142,7 @@ fetch('data.json')
         <img src="${projet.image}" alt="${projet.titre}">
       </div>
     </article>`;
-    sectionProjets.insertAdjacentHTML('beforeend', carte)
+      sectionProjets.insertAdjacentHTML('beforeend', carte)
     }
     projets.forEach(projet => {
       creerProjets(projet)
@@ -174,13 +174,13 @@ fetch('data.json')
     // --------------------------------------------------
 
     // TODO : forEach sur data.parcours
-    let parcours = data.parcour
+    let parcour = '';
     function creerParcours(parcour) {
-      let parcour = `<li class="parcours-item">
+       parcour = `<li class="parcours-item">
   <p class="parcours-titre">${parcour.annee} - ${parcour.titre}</p>
   <p class="parcours-lieu">${parcour.lieu}</p>
 </li>`
-listeParcours.insertAdjacentHTML('beforeend', parcour)
+      listeParcours.insertAdjacentHTML('beforeend', parcour)
     }
     parcours.forEach(parcour => {
       creerParcours(parcour)
