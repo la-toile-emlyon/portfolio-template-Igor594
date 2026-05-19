@@ -104,7 +104,7 @@ fetch('data.json')
         <p>${competence.description}</p>
         <div class="tags">${genererTags(competence.tags)}</div>
       </div>`;
-      sectionCompetences.insertAdjacentHTML('beforeend', competences);
+      sectionCompetences.insertAdjacentHTML('beforeend', carte);
     };
 let competences= data.competences
     competences.forEach(competence => {
@@ -125,25 +125,26 @@ let competences= data.competences
     // --------------------------------------------------
 
     // TODO : forEach sur data.projets
-    let projets = '';
+    
     function creerProjets(projet) {
-       projet = `<article class="projet-card">
+       let creerProjet = `<article class="projet-card">
       <div class="projet-content">
         <div class="projet-top">
           <h3>${projet.titre}</h3>
-          <div class="tags"> ${genererTags()} </div>
+          <div class="tags"> ${genererTags(projet.tags)} </div>
         </div>
         <div class="projet-bottom">
           <p>${projet.description}</p>
-          <a href="lien" class="btn-projet">VOIR LE PROJET ↗</a>
+          <a href=${projet.href} class="btn-projet">VOIR LE PROJET ↗</a>
         </div>
       </div>
       <div class="projet-image">
         <img src="${projet.image}" alt="${projet.titre}">
       </div>
     </article>`;
-      sectionProjets.insertAdjacentHTML('beforeend', carte)
+      sectionProjets.insertAdjacentHTML('beforeend', creerProjet)
     }
+    let projets = data.projets;
     projets.forEach(projet => {
       creerProjets(projet)
     });
@@ -174,15 +175,16 @@ let competences= data.competences
     // --------------------------------------------------
 
     // TODO : forEach sur data.parcours
-    let parcour = '';
+
     function creerParcours(parcour) {
-       parcour = `<li class="parcours-item">
-  <p class="parcours-titre">${parcour.annee} - ${parcour.titre}</p>
+    let creerParcour = `<li class="parcours-item">
+  <p class="parcours-titre">${[parcour.annee, parcour.titre]}</p>
   <p class="parcours-lieu">${parcour.lieu}</p>
 </li>`
-      listeParcours.insertAdjacentHTML('beforeend', parcour)
+      listeParcours.insertAdjacentHTML('beforeend', creerParcour)
     }
-    parcours.forEach(parcour => {
+    let parcour = data.parcours;
+    parcour.forEach(parcour => {
       creerParcours(parcour)
     });
     // Pour chaque item, construire ce HTML et l'injecter :
@@ -200,8 +202,12 @@ let competences= data.competences
     // --------------------------------------------------
 
     // TODO : logoFooter.textContent  = ...
+    logoFooter.textContent  = data.logo
     // TODO : liensFooter.innerHTML   = genererLiens(...)
+    liensFooter.innerHTML   = genererLiens(data.nav)
     // TODO : ctaFooter.textContent   = ...
+    ctaFooter.textContent   = data.cta.label
     //        ctaFooter.href          = ...
+     ctaFooter.href          =data.cta.href
 
   });
